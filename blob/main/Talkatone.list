@@ -1,20 +1,25 @@
 # NAME: Talkatone
 # AUTHOR: y zl
-# DESC: Talkatone 分流规则，tktn.be 走代理，其他直连
 # UPDATED: 2025-10-15
+# DESC: Talkatone 应用直连规则（除特殊域名 tktn.be 走代理）
+# DOMAIN-SUFFIX 直连，IP 段直连
+# tktn.be 请在策略组中单独设置为代理
 
-# --- 特殊：需要走代理的域名 ---
-HOST-SUFFIX,tktn.be,Proxy
+# ======= Domain-Suffix =======
+DOMAIN-SUFFIX,mobilefuse.com,DIRECT
+DOMAIN-SUFFIX,crashlytics.com,DIRECT
+DOMAIN-SUFFIX,talkatone.com,DIRECT
+DOMAIN-SUFFIX,inmobi.com,DIRECT
+DOMAIN-SUFFIX,kochava.com,DIRECT
+DOMAIN-SUFFIX,cohere.com,DIRECT
+DOMAIN-SUFFIX,ip-api.com,DIRECT
 
-# --- Talkatone 官方及关联服务直连 ---
-HOST-SUFFIX,mobilefuse.com,DIRECT
-HOST-SUFFIX,crashlytics.com,DIRECT
-HOST-SUFFIX,talkatone.com,DIRECT
-HOST-SUFFIX,inmobi.com,DIRECT
-HOST-SUFFIX,kochava.com,DIRECT
-HOST-SUFFIX,cohere.com,DIRECT
-HOST-SUFFIX,ip-api.com,DIRECT
+# ======= IP-CIDR =======
 IP-CIDR,50.117.27.0/24,DIRECT
 IP-CIDR,69.46.75.0/24,DIRECT
 IP-CIDR,205.164.56.0/24,DIRECT
 IP-CIDR,63.251.124.0/24,DIRECT
+
+# ======= Special Rule =======
+# 以下域名需走代理，请在 Quantumult X 策略组中手动设定
+DOMAIN-SUFFIX,tktn.be,PROXY
