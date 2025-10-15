@@ -1,0 +1,20 @@
+# NAME: Talkatone
+# AUTHOR: y zl
+# DESC: Talkatone 分流规则，tktn.be 走代理，其他直连
+# UPDATED: 2025-10-15
+
+# --- 特殊：需要走代理的域名 ---
+HOST-SUFFIX,tktn.be,Proxy
+
+# --- Talkatone 官方及关联服务直连 ---
+HOST-SUFFIX,mobilefuse.com,DIRECT
+HOST-SUFFIX,crashlytics.com,DIRECT
+HOST-SUFFIX,talkatone.com,DIRECT
+HOST-SUFFIX,inmobi.com,DIRECT
+HOST-SUFFIX,kochava.com,DIRECT
+HOST-SUFFIX,cohere.com,DIRECT
+HOST-SUFFIX,ip-api.com,DIRECT
+IP-CIDR,50.117.27.0/24,DIRECT
+IP-CIDR,69.46.75.0/24,DIRECT
+IP-CIDR,205.164.56.0/24,DIRECT
+IP-CIDR,63.251.124.0/24,DIRECT
