@@ -22,4 +22,4 @@ IP-CIDR,63.251.124.0/24,DIRECT
 
 # ======= Special Rule =======
 # 以下域名需走代理，请在 Quantumult X 策略组中手动设定
-DOMAIN-SUFFIX,tktn.be,PROXY
+DOMAIN-SUFFIX,tktn.be,美国节点
